@@ -7,8 +7,8 @@ const AddTodo = ({addTodo}) => {
 
     const submit = (e)=>{
         e.preventDefault();
-        if(!title || !desc){
-            alert("Title or Desc cannot be empty")
+        if(!title ||!desc){
+           return alert("Title or Desc cannot be empty")
         }
         addTodo(title,desc);
         setTitle("");
@@ -27,7 +27,6 @@ const AddTodo = ({addTodo}) => {
             type="text" value={title} onChange={(e)=>{setTitle(e.target.value)}}
             className="form-control"
             id="title"
-            aria-describedby="emailHelp"
           />
           
         </div>
@@ -48,6 +47,6 @@ const AddTodo = ({addTodo}) => {
       </form>
     </div>
   );
-};
+}
 
 export default AddTodo;
